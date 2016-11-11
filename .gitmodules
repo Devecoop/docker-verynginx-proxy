@@ -1,3 +1,6 @@
 [submodule "nginx-proxy"]
 	path = nginx-proxy
 	url = git@github.com:jwilder/nginx-proxy.git
+[submodule "docker-verynginx"]
+	path = docker-verynginx
+	url = git@github.com:camilb/docker-verynginx.git
