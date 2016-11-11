@@ -1,0 +1,3 @@
+[submodule "nginx-proxy"]
+	path = nginx-proxy
+	url = git@github.com:jwilder/nginx-proxy.git
