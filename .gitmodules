@@ -4,3 +4,6 @@
 [submodule "docker-verynginx"]
 	path = docker-verynginx
 	url = git@github.com:camilb/docker-verynginx.git
+[submodule "verynginx"]
+	path = verynginx
+	url = git@github.com:alexazhou/VeryNginx.git
