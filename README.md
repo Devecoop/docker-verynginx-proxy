@@ -53,6 +53,7 @@ If you want your nginx-proxy container to be attached to a different network, yo
 ```bash
 $ docker network connect my-other-network dockergen
 $ docker network connect my-other-network nginx
+$ docker restart dockergen
 ```
 
 #### SSL Backends
