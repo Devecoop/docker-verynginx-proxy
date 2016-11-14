@@ -1,0 +1,20 @@
+version: '2'
+services:
+  nginx:
+    image: camil/verynginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - /etc/nginx/conf.d
+      - ./config.json:/opt/verynginx/verynginx/configs/config.json
+
+  dockergen:
+    image: jwilder/docker-gen
+    container_name: dockergen
+    command: -notify-sighup nginx -watch /etc/docker-gen/templates/nginx.tmpl /etc/nginx/conf.d/default.conf
+    volumes_from:
+      - nginx
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl
